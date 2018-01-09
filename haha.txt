@@ -1,0 +1,155 @@
+前六周课程总结
+1.html\css
+行标签 块标签 行内块标签
+2.布局方式
+流失布局  
+定位布局：绝对 相对 固定
+弹性布局：flex：justify-content 主轴对齐方式 
+                align-items 交叉轴对齐方式
+          flex-wrap;
+浮动布局：float:  left right (加空标签，清浮动)
+响应式布局：@media（媒体查询）；
+3.css选择器:（！important优先级最高）>id>class>标签 
+css sprite 图片精灵：优缺点：减少请求次数 
+css 动画：(使用动画)aniamtion（关键帧）@keyframes( ){  }
+          过渡效果 transition：all 2s linear 
+css 图形变化 ：transform    scale rotate translate skew倾斜
+css 常用单位 ：px % em rem vh vw;
+css 盒模型 marin\birder \padding\content
+           box-sizing:border-box/content-box; 
+css第三方：animate.css  ;   font-awsome字体图标库
+
+
+
+2.js 
+number： parseInt parseFloat Number（） num.toFixed()；
+string： + str.split() length slice  str.substr/substring() endWith() includes() toUpperCase()  toLowerCase()   str.trim()裁剪 去开头结尾的空格  indexOf(); 
+Boolean:  逻辑判断 && || !  !=  == ===  
+function: 
+undefined
+Object: 
+Array: length;  arr[i];  arr.push()/unshift()/splice()/slice()  arr.contact() arr.forEach()
+arr.filter()  arr.sort() arr.map()  arr.reduce()数组的聚合  
+Date（日期）:  new Date();date.getFullYear()/getMonth()/getDate();get.getHourse();getMiniutes();getSeconds();getDay();Date.now();
+Math:  MAth.random();随机数 Math.ceil（）；Math.floor（）；
+Math.round() 四舍五入 Math.abs(绝对值) Math.pow()次方运算  Math.max() Math.min() 
+Regex:
+JSON JSON.parse() JSON.stringify()
+
+3.流程控制语句
+if-else ； for(){}；break:跳出当前循环.
+do-while() 先执行,后判断，至少执行一次  while() 先判断后执行，可能一次也不执行
+4.定义类 创建对象
+
+class{
+  constructor(brand,price){
+   this.brand();
+   this.price();
+
+}
+
+discription(){
+
+}
+}
+new（）；
+5.DOM 操作原生API;
+查找表签 querySelector）（）；提取标签内容innerHTML(),innerText(),value（）  添加标签appendChid（）  删除标签 removeChild（） 创建标签  createElement（）
+属性操作 set/getAttribute() css操作 ele.style.cssName  class操作className,classList  data/8自定义属性 ?
+DOM是树形结构 
+6.DOM事件 
+  鼠标 click mouseover mouseout mouseenter mouseleave mousedown mouseup wheel 
+  键盘 keydown keypress keyup 
+  表单事件 submit focuse input change  reset blur
+  滚动事件 scroll
+  页面加载事件：（html页面，以及引入的所有资源加载完成） document.onload();
+ （页面加载解析完成触发）DOMContentLoaded();   
+  窗口大小变化事件：resize(重置大小)   window.onresize() ?
+7. 事件监听两种方式：on,addEventListener();             
+   事件的传播过程 ：捕获  冒泡；
+   事件的默认行为：阻止默认行为；
+8.jquery操作
+  $('选择器').html（）/text()/val();
+  $('选择器').attr()/prop();
+  $('选择器').css();
+  $('选择器').addClass()/removeClass();
+  $('选择器').append()...;
+  $('选择器').parent()/siblings()...
+  $('选择器').width()/height()/innerWidth/innerHeight/outerWidth()/outerHeight();
+  $('选择器').offset()/position();
+  $('选择器').eventname(function(){})
+  $('选择器').on('eventname',function(){})   
+  $('选择器').on('eventname','子选择器'，function(){})
+  $('选择器').one('事件名'，function（）{})
+  $('选择器').off('eventname',要解绑定的函数名)解除事件绑定，缺省第二个参数，就click的所有函数都解绑；
+  
+  jquery 动画操作  
+  $('选择器').animate()
+  $('选择器').delay();
+  $('选择器').show/hide();
+  $('选择器).finish/stOp();
+  js专门做动画  velocity.js;
+  jquery ajax
+
+ 
+  $.get()
+  $.post() 
+  $.ajax();请求的通用写法
+9.art-template模板
+1）浏览器端的模板 
+<script id='',type='text/html'>  
+{{变量 | 过滤器名称   }}
+{{if}}
+ {{each arr item  index}}
+  
+ {{/each}} 
+ {{表达式? '': '' }} 
+{{/if}}
+
+let html=template('id',jsonDate)；
+2) 定义过滤器
+template.defaults.imports.过滤器名称=function（oldvalue）{ return newvalue；}   
+10）Node.js基本操作
+http:
+     创建服务器 createServer（）
+     监听request事件server.on（‘request’,(req,res)=>{}）  
+     监听端口 server.listen（3000）
+     get 请求数据在url中，进行url.parse就可以得到数据对象 
+     post 请求数据在请求体中，需要监听request的data事件和end事件 才能获取完整数据，进行     querystring.parse  
+fs:文件操作  writeFile() /readFile()/creatReadStream();
+url:
+querystring: 
+11.浏览器端存储
+ localStorage; 无过期时间 
+ sessionStorage; 会话结束就没有
+ cookie 既可以持久化存储也可以会话结束就清空 
+ cookie：jquery.cookie.js
+12.bootstrap
+响应式的前端框架 媒体查询@media   
+栅格系统：1）容器.container .container-fulid
+         2）行 .row
+         3) 一行分为12列
+         xs sm md lg
+                
+13.less css的预处理语言
+  增加了变量 函数 mixin extend @import  
+  支持条件预计 when ，支持循环操作迭代loop
+        
+14.git
+git itnit
+git add *
+git commit -m'说明'
+git log
+ git reflog
+git status 
+rm  删除文件
+git rm 删仓库
+git rest --hard commitid
+git checkout --filename
+
+远程操作
+git clone....
+git push origin master ...
+git pull 拉去更新内容
+ 
+15.正则表达式
