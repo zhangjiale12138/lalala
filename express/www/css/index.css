@@ -1,0 +1,27 @@
+.container{
+
+
+margin: 0 auto;
+
+}
+.cell{
+    font-size: 30px;
+    width: 100%;
+    line-height: 80px;
+    background-color: #f2f2f3;
+}
+span{
+    margin-left: 390px;
+    
+}
+.lala{
+   font-size: 15px;
+   color: green;
+   margin-left:980px; 
+}
+.enter{
+    color:green;
+}
+.enter2{
+    color:red;
+}
